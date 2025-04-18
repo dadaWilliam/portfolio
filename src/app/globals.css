@@ -89,3 +89,19 @@ body {
 .reveal-section > * {
   transition-delay: calc(var(--reveal-index, 0) * 0.1s);
 }
+
+/* Three.js profile styling */
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Make sure the ThreeJS canvas fills the rounded container properly */
+.relative canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+}
