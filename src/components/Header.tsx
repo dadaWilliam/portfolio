@@ -6,15 +6,49 @@ import Link from "next/link";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const [activeSection, setActiveSection] = useState("");
+  
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      // Determine active section
+      const sections = ["about", "projects", "skills", "contact"];
+      const scrollPosition = window.scrollY + 100; // Add some offset
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          
+          if (
+            scrollPosition >= offsetTop && 
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop;
+      // Add offset to account for fixed header
+      window.scrollTo({
+        top: offsetTop - 80,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <header className={`fixed w-full bg-background/80 backdrop-blur-sm z-10 transition-all duration-300 ${scrolled ? "shadow-md py-3" : "py-5"} border-b border-foreground/10`}>
@@ -51,10 +85,38 @@ export default function Header() {
         {/* Desktop navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li><a href="#about" className="hover:text-foreground/70 transition">About</a></li>
-            <li><a href="#projects" className="hover:text-foreground/70 transition">Projects</a></li>
-            <li><a href="#skills" className="hover:text-foreground/70 transition">Skills</a></li>
-            <li><a href="#contact" className="hover:text-foreground/70 transition">Contact</a></li>
+            <li>
+              <button 
+                onClick={() => scrollToSection("about")} 
+                className={`hover:text-foreground/70 transition ${activeSection === "about" ? "text-primary font-medium" : ""}`}
+              >
+                About
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection("projects")} 
+                className={`hover:text-foreground/70 transition ${activeSection === "projects" ? "text-primary font-medium" : ""}`}
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection("skills")} 
+                className={`hover:text-foreground/70 transition ${activeSection === "skills" ? "text-primary font-medium" : ""}`}
+              >
+                Skills
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection("contact")} 
+                className={`hover:text-foreground/70 transition ${activeSection === "contact" ? "text-primary font-medium" : ""}`}
+              >
+                Contact
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -64,40 +126,36 @@ export default function Header() {
             <nav className="container mx-auto px-4 py-4">
               <ul className="flex flex-col space-y-4">
                 <li>
-                  <a 
-                    href="#about" 
-                    className="block py-2 hover:text-foreground/70 transition"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <button 
+                    onClick={() => scrollToSection("about")} 
+                    className={`block py-2 hover:text-foreground/70 transition text-left w-full ${activeSection === "about" ? "text-primary font-medium" : ""}`}
                   >
                     About
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a 
-                    href="#projects" 
-                    className="block py-2 hover:text-foreground/70 transition"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <button 
+                    onClick={() => scrollToSection("projects")} 
+                    className={`block py-2 hover:text-foreground/70 transition text-left w-full ${activeSection === "projects" ? "text-primary font-medium" : ""}`}
                   >
                     Projects
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a 
-                    href="#skills" 
-                    className="block py-2 hover:text-foreground/70 transition"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <button 
+                    onClick={() => scrollToSection("skills")} 
+                    className={`block py-2 hover:text-foreground/70 transition text-left w-full ${activeSection === "skills" ? "text-primary font-medium" : ""}`}
                   >
                     Skills
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a 
-                    href="#contact" 
-                    className="block py-2 hover:text-foreground/70 transition"
-                    onClick={() => setMobileMenuOpen(false)}
+                  <button 
+                    onClick={() => scrollToSection("contact")} 
+                    className={`block py-2 hover:text-foreground/70 transition text-left w-full ${activeSection === "contact" ? "text-primary font-medium" : ""}`}
                   >
                     Contact
-                  </a>
+                  </button>
                 </li>
               </ul>
             </nav>

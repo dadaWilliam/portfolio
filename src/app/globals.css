@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -60,4 +64,28 @@ body {
   .btn-outline {
     @apply border border-foreground/20 hover:border-foreground/50;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Stagger the animations for child elements */
+.reveal-section {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-section > * {
+  transition-delay: calc(var(--reveal-index, 0) * 0.1s);
 }

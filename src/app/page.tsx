@@ -1,16 +1,51 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Home() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop;
+      // Add offset to account for fixed header
+      window.scrollTo({
+        top: offsetTop - 80,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-section').forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      document.querySelectorAll('.reveal-section').forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Header/Navigation */}
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
@@ -21,18 +56,18 @@ export default function Home() {
                 impactful digital experiences.
               </p>
               <div className="flex gap-4">
-                <a 
-                  href="#contact" 
+                <button 
+                  onClick={() => scrollToSection("contact")} 
                   className="btn btn-primary"
                 >
                   Contact Me
-                </a>
-                <a 
-                  href="#projects" 
+                </button>
+                <button 
+                  onClick={() => scrollToSection("projects")} 
                   className="btn btn-outline"
                 >
                   View Work
-                </a>
+                </button>
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
@@ -48,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-foreground/5">
+      <section id="about" className="py-16 bg-foreground/5 reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto">
@@ -72,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16">
+      <section id="projects" className="py-16 reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -137,7 +172,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 bg-foreground/5">
+      <section id="skills" className="py-16 bg-foreground/5 reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Skills & Technologies</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
@@ -158,7 +193,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16">
+      <section id="contact" className="py-16 reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
           <div className="max-w-md mx-auto">

@@ -1,4 +1,18 @@
+"use client";
+
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop;
+      // Add offset to account for fixed header
+      window.scrollTo({
+        top: offsetTop - 80,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <footer className="py-8 border-t border-foreground/10">
       <div className="container mx-auto px-4 md:px-6">
@@ -35,10 +49,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Links</h3>
             <ul className="space-y-2 text-foreground/70">
-              <li><a href="#about" className="hover:text-foreground">About</a></li>
-              <li><a href="#projects" className="hover:text-foreground">Projects</a></li>
-              <li><a href="#skills" className="hover:text-foreground">Skills</a></li>
-              <li><a href="#contact" className="hover:text-foreground">Contact</a></li>
+              <li><button onClick={() => scrollToSection("about")} className="hover:text-foreground">About</button></li>
+              <li><button onClick={() => scrollToSection("projects")} className="hover:text-foreground">Projects</button></li>
+              <li><button onClick={() => scrollToSection("skills")} className="hover:text-foreground">Skills</button></li>
+              <li><button onClick={() => scrollToSection("contact")} className="hover:text-foreground">Contact</button></li>
             </ul>
           </div>
           
