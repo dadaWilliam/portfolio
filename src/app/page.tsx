@@ -1,6 +1,6 @@
 "use client";
 
-// import Image from "next/image";
+import Image from "next/image";
 // import Link from "next/link";
 import { useEffect } from "react";
 import Header from "../components/Header";
@@ -75,7 +75,13 @@ export default function Home() {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-foreground/10">
                 {/* Replace with your actual profile image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold">
-                  W
+                <Image
+                  src="/avatar.png"
+                  alt="Profile picture"
+                  fill
+                  className="object-cover"
+                  priority
+                />
                 </div>
               </div>
             </div>
