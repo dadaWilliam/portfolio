@@ -54,7 +54,7 @@ export default function Header() {
     <header className={`fixed w-full bg-background/80 backdrop-blur-sm z-10 transition-all duration-300 ${scrolled ? "shadow-md py-3" : "py-5"} border-b border-foreground/10`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link href="/" className="font-bold text-xl">
-          Fuzhen (Will) Zhan
+        🧑🏻‍💻 Fuzhen (Will) Zhan 
         </Link>
 
         {/* Mobile menu button */}
@@ -119,7 +119,7 @@ export default function Header() {
             </li>
             <li>
               <a 
-                href="/resume.pdf" 
+                href="https://m.xueba.ca:3453/api/public/dl/IuPMjbX0?inline=true" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-foreground/70 transition"
@@ -166,6 +166,16 @@ export default function Header() {
                   >
                     Contact
                   </button>
+                </li>
+                <li>
+                  <a 
+                    href="https://m.xueba.ca:3453/api/public/dl/IuPMjbX0?inline=true" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground/70 transition"
+                  >
+                    Resume
+                  </a>
                 </li>
               </ul>
             </nav>

@@ -20,7 +20,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Fuzhen (Will) Zhan</h3>
             <p className="text-foreground/70 mb-4">
-              Software Engineer & Information Security Specialist at Carnegie Mellon University.
+              Full-stack 💻 & Mechine Learning 🤖 & Security 🔐
+              Carnegie Mellon University
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/dadaWilliam" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground">
@@ -53,19 +54,28 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-foreground/70">
-              <li>fzhan@andrew.cmu.edu</li>
+              <li className="flex items-center gap-2">
+                <a href="mailto:fzhan@andrew.cmu.edu" className="text-foreground/70 hover:text-foreground">
+                  <span className="sr-only">Email</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                </a>
+                fzhan@andrew.cmu.edu
+              </li>
               {/* <li>+1 8786001215</li> */}
               <li>Pittsburgh, PA, USA</li>
               <li>Mountain View, CA, USA</li>
-              <li>Chongqing, China</li>
-              <li>Chengdu, China</li>
+              {/* <li>Chongqing, China</li>
+              <li>Chengdu, China</li> */}
             </ul>
           </div>
         </div>
         
         <div className="border-t border-foreground/10 pt-8 text-center">
           <p>© {new Date().getFullYear()} Fuzhen (Will) Zhan. All rights reserved.</p>
-          <p className="text-foreground/60 mt-2">Built with Next.js and Tailwind CSS</p>
+          {/* <p className="text-foreground/60 mt-2">Built with Next.js and Tailwind CSS</p> */}
         </div>
       </div>
     </footer>

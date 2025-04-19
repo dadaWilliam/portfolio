@@ -50,11 +50,11 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Will</h1>
-              <h2 className="text-xl md:text-2xl text-foreground/70 mb-6">Software Engineer & Information Security Specialist</h2>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Will 👋</h1>
+              <h2 className="text-xl md:text-2xl mb-6">Full-stack 💻 & Mechine Learning 🤖 & Security 🔐 </h2>
               <p className="text-lg mb-8 max-w-md">
-                Master's student at Carnegie Mellon University specializing in Information Technology and Information Security. 
-                Passionate about building secure, scalable, and innovative software solutions.
+              Master's student at Carnegie Mellon University 🎓.  
+              Passionate about new Techs 🚀✨.
               </p>
               <div className="flex gap-4">
                 <button 
@@ -89,18 +89,18 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg mb-6">
-              I'm currently pursuing my Master of Science in Information Technology-Information Security at Carnegie Mellon University, 
+              I'm currently pursuing my Master of Science in Information Technology-Information Security at Carnegie Mellon University 🎓, 
               with a strong background in software development and information security. My academic journey includes a Bachelor's degree 
-              in EEE with Communication from the University of Glasgow and a Bachelor's in Communication Engineering from UESTC.
+              in EEE with Communication from the University of Glasgow 🎓 and a Bachelor's in Communication Engineering from UESTC 🎓.
             </p>
             <p className="text-lg mb-6">
-              With expertise in full-stack development, I've worked on various projects ranging from educational platforms to 
+              With experience in full-stack development, I've worked on various projects ranging from educational platforms to 
               distributed systems. I'm particularly interested in building secure, scalable applications and exploring the 
               intersection of machine learning and software engineering.
             </p>
             <p className="text-lg">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-              or working on personal projects that combine my interests in security and software development.
+              or working on personal projects that combine my interests in machine learning and software development with security in mind.
             </p>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function Home() {
             {/* Project 1 */}
             <div className="border border-foreground/10 rounded-lg overflow-hidden hover:shadow-lg transition">
               <div className="h-48 bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">Kitefun Technology</span>
+                <span className="text-white text-xl font-bold">Kitefun</span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Educational Platform</h3>
@@ -127,7 +127,7 @@ export default function Home() {
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">AWS</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">PostgreSQL</span>
                 </div>
-                <a href="https://xueba.ca" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="https://xueba.ca" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
 
@@ -137,7 +137,7 @@ export default function Home() {
                 <span className="text-white text-xl font-bold">5G Base Station</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Configuration Platform</h3>
+                <h3 className="text-xl font-bold mb-2">5G Configuration Platform</h3>
                 <p className="text-foreground/70 mb-4">
                   Built a secure control dashboard for 5G base station configuration using Next.js and FastAPI.
                 </p>
@@ -147,7 +147,7 @@ export default function Home() {
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">WebSocket</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Docker</span>
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
 
@@ -166,7 +166,7 @@ export default function Home() {
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Distributed Systems</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Raft</span>
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
 
@@ -184,9 +184,9 @@ export default function Home() {
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">PyTorch</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">scikit-learn</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Flask</span>
-                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">CNN</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Random Forest</span>
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
 
@@ -203,10 +203,10 @@ export default function Home() {
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">YOLOv10</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">FastAPI</span>
-                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Next.js</span>
-                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Prometheus</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">React</span>
+                  {/* <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Prometheus</span> */}
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
 
@@ -225,8 +225,9 @@ export default function Home() {
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">C</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">OpenMV</span>
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">STM32</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">PID</span>
                 </div>
-                <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a>
+                {/* <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">View Project →</a> */}
               </div>
             </div>
           </div>
@@ -243,7 +244,7 @@ export default function Home() {
               "Python", "JavaScript", "TypeScript", "Go", "Java", "C/C++",
               "Django", "React", "Next.js", "Flutter", "Spring Boot", "PyTorch",
               "TensorFlow", "AWS", "Docker", "PostgreSQL", "MongoDB", "Redis",
-              "Git", "CI/CD", "WebSocket", "OAuth", "JWT"
+              "Git", "CI/CD", "WebSocket", "OAuth", "JWT", "STM32"
             ].map((skill, index) => (
               <div key={index} className="flex flex-col items-center p-4 border border-foreground/10 rounded-lg hover:border-foreground/30 transition">
                 <div className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center mb-2">
@@ -261,7 +262,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
           <div className="max-w-md mx-auto">
-            <form className="space-y-6">
+            {/* <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 font-medium">Name</label>
                 <input 
@@ -295,8 +296,16 @@ export default function Home() {
               >
                 Send Message
               </button>
-            </form>
+            </form> */}
+           
             <div className="mt-8 flex justify-center space-x-4">
+              <a href="mailto:fzhan@andrew.cmu.edu" className="text-foreground/70 hover:text-foreground">
+                  <span className="sr-only">Email</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+              </a>
               <a href="https://github.com/dadaWilliam" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground">
                 <span className="sr-only">GitHub</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
