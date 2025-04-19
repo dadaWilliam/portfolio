@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://will.xueba.ca
+
+# Sitemaps
+Sitemap: https://will.xueba.ca/sitemap.xml
