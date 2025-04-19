@@ -50,10 +50,10 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Will 👋</h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I&#39;m Will 👋</h1>
               <h2 className="text-xl md:text-2xl mb-6">Full-stack 💻 & Mechine Learning 🤖 & Security 🔐 </h2>
               <p className="text-lg mb-8 max-w-md">
-              Master's student at Carnegie Mellon University 🎓.  
+              Master student at Carnegie Mellon University 🎓.  
               Passionate about new Techs 🚀✨.
               </p>
               <div className="flex gap-4">
@@ -89,17 +89,17 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto">
             <p className="text-lg mb-6">
-              I'm currently pursuing my Master of Science in Information Technology-Information Security at Carnegie Mellon University 🎓, 
-              with a strong background in software development and information security. My academic journey includes a Bachelor's degree 
-              in EEE with Communication from the University of Glasgow 🎓 and a Bachelor's in Communication Engineering from UESTC 🎓.
+              I&#39;m currently pursuing my Master of Science in Information Technology-Information Security at Carnegie Mellon University 🎓, 
+              with a strong background in software development and information security. My academic journey includes a Bachelor degree 
+              in EEE with Communication from the University of Glasgow 🎓 and a Bachelor degree in Communication Engineering from UESTC 🎓.
             </p>
             <p className="text-lg mb-6">
-              With experience in full-stack development, I've worked on various projects ranging from educational platforms to 
-              distributed systems. I'm particularly interested in building secure, scalable applications and exploring the 
+              With experience in full-stack development, I have worked on various projects ranging from educational platforms to 
+              distributed systems. I am particularly interested in building secure, scalable applications and exploring the 
               intersection of machine learning and software engineering.
             </p>
             <p className="text-lg">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+              When I&#39;m not coding, you can find me exploring new technologies, contributing to open-source projects, 
               or working on personal projects that combine my interests in machine learning and software development with security in mind.
             </p>
           </div>
