@@ -1,5 +1,7 @@
 # Personal Portfolio Website - Fuzhen(Will) Zhan
 
+![Screenshot](public/screenshot.png)
+
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my professional experience, projects, and skills in full-stack development, machine learning, and information security.
 
 ## Features
