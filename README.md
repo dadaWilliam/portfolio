@@ -41,15 +41,14 @@ yarn dev
 - `public/` - Static assets like images and fonts
 - `tailwind.config.js` - Tailwind CSS configuration
 
-
-## License
-
-MIT License - feel free to use this template for your own portfolio!
-
 ## Contact
 
 Feel free to reach out to me through:
 
-- Email: [fzhan@andrew.cmu.edu]
-- LinkedIn: [https://linkedin.com/in/fuzhen-zhan]
-- GitHub: [https://github.com/dadaWilliam]
+- Email: fzhan@andrew.cmu.edu
+- LinkedIn: https://linkedin.com/in/fuzhen-zhan
+- GitHub: https://github.com/dadaWilliam
+
+## License
+
+MIT License - feel free to use this template for your own portfolio!
