@@ -51,7 +51,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I&#39;m Will 👋</h1>
-              <h2 className="text-xl md:text-2xl mb-6">Full-stack 💻 & Mechine Learning 🤖 & Security 🔐 </h2>
+              <h2 className="text-xl md:text-2xl mb-6">Full-stack 💻 & Machine Learning 🤖 & Security 🔐 </h2>
               <p className="text-lg mb-8 max-w-md">
               Master student at Carnegie Mellon University 🎓.  
               Passionate about new Techs 🚀✨.
