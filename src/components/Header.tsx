@@ -119,7 +119,7 @@ export default function Header() {
             </li>
             <li>
               <a 
-                href="https://m.xueba.ca:3453/api/public/dl/IuPMjbX0?inline=true" 
+                href="https://m.xueba.ca:3453/api/public/dl/Us60kkkB?inline=true" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-foreground/70 transition"
