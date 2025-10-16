@@ -112,8 +112,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section id="experience" className="py-16 reveal-section opacity-0">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold mb-12 text-center">Work Experience</h2>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="border border-foreground/10 rounded-lg p-6 hover:shadow-lg transition">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-xl sm:text-2xl font-bold">Compani, Inc.</h3>
+                  <a href="https://www.linkedin.com/company/companiapp/" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground flex-shrink-0">
+                    <span className="sr-only">LinkedIn</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </a>
+                </div>
+                <span className="text-foreground/70 text-sm sm:text-base">Feb 2025 - Jun 2025</span>
+              </div>
+              <h4 className="text-base sm:text-lg font-semibold mb-4">Co-Founder & Full-Stack Developer</h4>
+              <ul className="list-disc list-inside space-y-2 mb-4 text-sm sm:text-base">
+                <li>Delivered MVP in 1 week, scaling to 500+ monthly active users with 0 major incidents; led the full product lifecycle from requirements to production.</li>
+                <li>Built cross-platform Flutter app with modules for application tracking, interview management, and user profiles, supporting real-time updates, offline caching, and AI response streaming.</li>
+                <li>Designed and deployed Spring Boot backend with PostgreSQL & Redis, integrating AWS Cognito & Google OAuth for secure, scalable multi-platform SSO.</li>
+                <li>Reduced LLM API costs 22% and cut timeout rate to &lt;1% through caching and prompt templating.</li>
+              </ul>
+              <div className="flex gap-2 flex-wrap">
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Flutter</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Spring Boot</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">PostgreSQL</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Redis</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">AWS Cognito</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Google OAuth</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">LLM API</span>
+              </div>
+            </div>
+
+            <div className="border border-foreground/10 rounded-lg p-6 hover:shadow-lg transition">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-xl sm:text-2xl font-bold">GoodRunss AI, Inc.</h3>
+                  <a href="https://www.linkedin.com/company/goodrunss-ai/" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-foreground flex-shrink-0">
+                    <span className="sr-only">LinkedIn</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </a>
+                </div>
+                <span className="text-foreground/70 text-sm sm:text-base">Jul 2025 - Aug 2025</span>
+              </div>
+              <h4 className="text-base sm:text-lg font-semibold mb-4">Frontend Lead</h4>
+              <ul className="list-disc list-inside space-y-2 mb-4 text-sm sm:text-base">
+                <li>Architected the frontend of an AI-powered court management dashboard, implementing modular UI components with shadcn/ui and state management for scalable feature growth.</li>
+                <li>Built responsive, high-performance Next.js UI with real-time court availability tracking, interactive Chart.js visualizations, and optimized rendering via SSR, code-splitting, and lazy-loading.</li>
+                <li>Managed collaborative Git workflows (feature branching, PR reviews) and containerized deployments via Docker on AWS EC2, cutting deployment time under 5 mins and achieving 99.9% uptime.</li>
+                <li>Integrated REST APIs with backend AI models to deliver busy-level predictions, enabling data-driven scheduling decisions and boosting user engagement by 15%.</li>
+              </ul>
+              <div className="flex gap-2 flex-wrap">
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Next.js</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Git</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Docker</span>
+                  <span className="px-2 py-1 bg-foreground/10 rounded text-sm">AWS EC2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-16 reveal-section opacity-0">
+      <section id="projects" className="reveal-section opacity-0">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -165,7 +236,7 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Distributed System</h3>
                 <p className="text-foreground/70 mb-4">
-                  Implemented Raft consensus algorithm in Go with leader election and fault tolerance.
+                  Implemented Raft in Go with leader election, log replication, and fault-tolerant state machine replication; built custom RPCs using goroutines and channels to simulate failures and validate correctness under concurrency. Tested log consistency, leader stability, and fault resilience in a simulated cluster, gaining hands-on experience with distributed systems concepts such as consensus and the CAP theorem.
                 </p>
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Go</span>
@@ -184,7 +255,7 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Machine Learning Pipeline</h3>
                 <p className="text-foreground/70 mb-4">
-                  Developed a supervised ML pipeline for activity recognition using accelerometer data, achieving 90% accuracy.
+                  Developed a supervised ML pipeline for wrist-worn accelerometer data with segmentation, windowing, normalization, and feature extraction. Trained and compared Random Forest, SVM, and CNN, achieving 90%+ test accuracy and deploying the best model via Flask API for mobile/wearable integration.
                 </p>
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">PyTorch</span>
@@ -224,7 +295,7 @@ export default function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Multi-functional Vehicle</h3>
                 <p className="text-foreground/70 mb-4">
-                  Led development of an autonomous vehicle with line detection, obstacle sensing, and automated ball throwing.
+                  Led a 10-member team in designing a smart vehicle capable of line detection, radar-based obstacle sensing, PID-controlled movement, and automated ball throwing. Built OpenMV visual recognition module and STM32, achieving 98% detection accuracy and ranking 1st/100+.
                 </p>
                 <div className="flex gap-2 mb-4 flex-wrap">
                   <span className="px-2 py-1 bg-foreground/10 rounded text-sm">Python</span>
